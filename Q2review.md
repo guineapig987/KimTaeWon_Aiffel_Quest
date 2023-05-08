@@ -17,7 +17,8 @@
 
 ---
 작성한 코드
-
+<pre>
+<code>
 !pip install ColabTurtlePlus
 
 
@@ -52,7 +53,8 @@ for x in range(5):  # maze 좌표 탐색
 print("현재 좌표 : ",t.position()) 
 
 pprint.pprint(maze)
-
+</code>
+</pre>
 
 # 참고 링크 및 코드 개선 여부
 
