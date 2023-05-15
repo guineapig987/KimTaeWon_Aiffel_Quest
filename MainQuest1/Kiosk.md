@@ -16,31 +16,30 @@ class Kiosk:
 
     # # 주문 메서드
     def menu_select(self):
-        n = int(input("주문하실 메뉴번호를 입력해주세요 : "))
+        while True:
+            n = int(input("주문하실 메뉴번호를 입력해주세요 : "))
+
+            if n > 0 and n <= len(self.menu):
+                while True:   
+                    t = int(input("온도를 선택해주세요.\n 1.ICY\n 2.HOT\n"))
+                    if t == 1:
+                        self.temp = 'ICY'
+                        break
+                    elif t == 2:
+                        self.temp = 'HOT'
+                        break
+                    else:
+                        print("올바른 번호를 선택해주세요.")
         
-        if n > 0 and n <= len(self.menu):
-            t = 0
-            while t!=1 or t!=2:   
-                t = int(input("온도를 선택해주세요.\n 1.ICY\n 2.HOT\n"))
-                if t == 1:
-                    self.temp = 'ICY'
-                    break
-                elif t == 2:
-                    self.temp = 'HOT'
-                    break
-                else:
-                    print("올바른 번호를 선택해주세요.")
-    
-            self.ordered_menu.append(self.temp + ' ' + self.menu[n-1]) # 주문목록 추가
-            self.ordered_price.append(self.price[n-1])
-            print(f"선택 메뉴 >> {self.temp + ' ' + menu[n-1]} : {price[n-1]}")
-        elif n == 0:
-            return  # pay 단계로 이동
-        else:
-            print("올바른 메뉴번호를 입력해주세요.")
-            return self.menu_select() # 재입력
-        print("(결제하시려면 0번을 입력해주세요).")
-        return self.menu_select() # 추가주문  
+                self.ordered_menu.append(self.temp + ' ' + self.menu[n-1]) # 주문목록 추가
+                self.ordered_price.append(self.price[n-1])
+                print(f"선택 메뉴 >> {self.temp + ' ' + menu[n-1]} : {price[n-1]}")
+
+            elif n == 0:
+                break  #  결제단계(pay)로 이동
+            else:
+                print("올바른 메뉴번호를 입력해주세요.")            
+            print("(결제하시려면 0번을 입력해주세요).")
             
         
     # # 지불
