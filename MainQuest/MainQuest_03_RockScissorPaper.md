@@ -1,6 +1,4 @@
-<pre>
-<code>
-
+```python
 import tensorflow as tf
 from tensorflow import keras
 import numpy as np
@@ -50,6 +48,4 @@ plt.xlabel('Epoch')
 plt.legend(['Train', 'Test'], loc='upper left')
 
 plt.show()
-</code>
-</pre>
-
+```
