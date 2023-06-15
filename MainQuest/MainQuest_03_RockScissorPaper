@@ -1,0 +1,54 @@
+```python
+
+import tensorflow as tf
+from tensorflow import keras
+import numpy as np
+
+#하이퍼파리미터
+n_channel_1=32
+n_channel_2=64
+n_dense=64
+n_train_epoch=10
+
+#레이어 생성
+model = keras.models.Sequential()
+model.add(keras.layers.Conv2D(n_channel_1, (3,3), activation='relu', input_shape=(28,28,3)))
+model.add(keras.layers.MaxPooling2D(2,2))
+model.add(keras.layers.Conv2D(n_channel_2, (3,3), activation='relu'))
+model.add(keras.layers.MaxPooling2D(2,2))
+model.add(keras.layers.Flatten())
+model.add(keras.layers.Dropout(0.1))    #dropout
+model.add(keras.layers.Dense(n_dense, activation='relu'))
+model.add(keras.layers.Dense(3,activation='softmax'))
+
+model.summary()
+
+
+#학습
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+model.fit(x_train, y_train, epochs=n_train_epoch)
+
+
+#평가 및 시각화
+#train데이터와 test데이터 정확도 비교
+import matplotlib.pyplot as plt
+
+loss, accuracy = model.evaluate(x_test, y_test)
+print("test_loss: {} ".format(loss))
+print("test_accuracy: {}".format(accuracy))
+
+history = model.fit(x_train, y_train, epochs=n_train_epoch, validation_data=(x_test, y_test))
+
+plt.figure(figsize=(12, 4))
+
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
+plt.title('Model accuracy')
+plt.ylabel('Accuracy')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Test'], loc='upper left')
+
+plt.show()
+
+
+```
