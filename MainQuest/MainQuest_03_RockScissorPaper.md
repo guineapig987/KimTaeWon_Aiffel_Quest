@@ -49,3 +49,27 @@ plt.legend(['Train', 'Test'], loc='upper left')
 
 plt.show()
 ```
+
+<pre>
+Epoch 1/10
+10/10 [==============================] - 1s 34ms/step - loss: 35.7339 - accuracy: 0.3270
+Epoch 2/10
+10/10 [==============================] - 0s 36ms/step - loss: 4.9983 - accuracy: 0.3679
+Epoch 3/10
+10/10 [==============================] - 0s 38ms/step - loss: 1.3350 - accuracy: 0.5283
+Epoch 4/10
+10/10 [==============================] - 0s 36ms/step - loss: 0.7124 - accuracy: 0.7013
+Epoch 5/10
+10/10 [==============================] - 0s 36ms/step - loss: 0.3903 - accuracy: 0.8396
+Epoch 6/10
+10/10 [==============================] - 0s 39ms/step - loss: 0.1975 - accuracy: 0.9340
+Epoch 7/10
+10/10 [==============================] - 0s 37ms/step - loss: 0.1306 - accuracy: 0.9717
+Epoch 8/10
+10/10 [==============================] - 0s 35ms/step - loss: 0.0860 - accuracy: 0.9811
+Epoch 9/10
+10/10 [==============================] - 0s 36ms/step - loss: 0.0569 - accuracy: 0.9843
+Epoch 10/10
+10/10 [==============================] - 0s 36ms/step - loss: 0.0239 - accuracy: 0.9969
+![image](https://github.com/guineapig987/Python_Quest_KimTaeWon/assets/106423212/55358209-d9ec-494e-a08c-341c8a8215a3)
+</pre>
