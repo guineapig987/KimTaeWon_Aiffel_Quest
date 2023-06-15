@@ -81,3 +81,4 @@ Epoch 10/10
 test_loss: 7.2212233543396 
 test_accuracy: 0.3333333432674408
 </pre>
+![image](https://github.com/guineapig987/Python_Quest_KimTaeWon/assets/106423212/4d11b441-0b36-4422-a9f4-f1d4aee8b34e)
