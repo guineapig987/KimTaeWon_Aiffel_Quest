@@ -23,7 +23,7 @@ model.add(keras.layers.Dense(3,activation='softmax'))
 model.summary()
 
 
-#학습
+#학습(train 318장, test 300장)
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 model.fit(x_train, y_train, epochs=n_train_epoch)
 
