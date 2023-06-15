@@ -50,6 +50,8 @@ plt.legend(['Train', 'Test'], loc='upper left')
 plt.show()
 ```
 
+
+
 <pre>
 Epoch 1/10
 10/10 [==============================] - 1s 34ms/step - loss: 35.7339 - accuracy: 0.3270
@@ -71,5 +73,11 @@ Epoch 9/10
 10/10 [==============================] - 0s 36ms/step - loss: 0.0569 - accuracy: 0.9843
 Epoch 10/10
 10/10 [==============================] - 0s 36ms/step - loss: 0.0239 - accuracy: 0.9969
-![image](https://github.com/guineapig987/Python_Quest_KimTaeWon/assets/106423212/55358209-d9ec-494e-a08c-341c8a8215a3)
+
+</pre>
+
+<pre>
+10/10 [==============================] - 0s 8ms/step - loss: 7.2212 - accuracy: 0.3333
+test_loss: 7.2212233543396 
+test_accuracy: 0.3333333432674408
 </pre>
