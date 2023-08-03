@@ -1,0 +1,5 @@
+VAE
+Latent
+Upsampling
+분산 표현
+Text, image, signal -> embedding
